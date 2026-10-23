@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Add or update a plugin
+    url: https://github.com/manikanta9176/plugin-marketplace/blob/main/CONTRIBUTING.md
+    about: A plugin is added with a pull request. Read the contributing guide, then open a pull request.
+  - name: Security vulnerability in this repository
+    url: https://github.com/manikanta9176/plugin-marketplace/security/advisories/new
+    about: Report a vulnerability in this catalog repository privately. A bug in a third-party plugin belongs in that plugin's repository.

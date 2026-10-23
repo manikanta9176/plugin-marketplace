@@ -1,0 +1,43 @@
+name: Catalog bug
+description: A marketplace entry is missing, wrong, or its pinned commit does not resolve.
+title: "catalog: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for the catalog in this repository. A bug inside a plugin's own product belongs in that plugin's repository.
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin name
+      description: The kebab-case name from marketplace.json.
+      placeholder: my-plugin
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What is wrong?
+      options:
+        - Missing from the catalog
+        - Wrong description, homepage, or keywords
+        - Pinned commit does not resolve
+        - Generated index is stale
+        - Something else about the catalog entry
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What happened
+      description: Include the source URL and the pinned SHA when you have them.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Before you submit
+      options:
+        - label: This is about the catalog entry, not a bug inside the plugin itself.
+          required: true
