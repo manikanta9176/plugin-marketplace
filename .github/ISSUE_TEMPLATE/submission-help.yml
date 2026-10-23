@@ -1,0 +1,43 @@
+name: Submission help
+description: You are blocked while preparing a plugin pull request.
+title: "submission: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A plugin is added by pull request, not by this issue. Read CONTRIBUTING.md first. Open this only if you are stuck before that pull request.
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin name
+      placeholder: my-plugin
+    validations:
+      required: true
+  - type: dropdown
+    id: stuck
+    attributes:
+      label: Where are you stuck?
+      options:
+        - marketplace.json entry
+        - Pinning the commit SHA
+        - Regenerating the index
+        - Local validation
+        - Ownership or license
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you already tried
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source repository
+      description: Public URL, if you have one.
+      placeholder: https://github.com/my-org/my-plugin
+    validations:
+      required: false
